@@ -29,6 +29,8 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
+                        'btn-background': '#FF4240',
+                        'hover-bg': '#FF1130',
                     }
                 }
             }
@@ -39,7 +41,7 @@
 <body class="font-Manrope">
     <header class="container m-auto ">
         <nav class="py-12">
-            <div class="navbar bg-base-100">
+            <div class="navbar">
                 <div class="navbar-start">
                     <div class="dropdown">
                         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -62,7 +64,7 @@
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-1">
-                        <li><a>Home</a></li>
+                        <li class="text-btn-background"><a>Home</a></li>
                         <li><a>About</a></li>
                         <li><a>Page</a></li>
                         <li><a>Blog</a></li>
@@ -70,15 +72,52 @@
                     </ul>
                 </div>
                 <div class="navbar-end gap-6">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <a class="btn">Get Ticket</a>
+                    <i class="fa-solid fa-magnifying-glass hidden md:flex lg:flex"></i>
+                    <a class="btn bg-btn-background text-white hover:bg-hover-bg">Get Ticket</a>
                 </div>
             </div>
         </nav>
 
         <!--Banner Section-->
         <section>
-            
+            <div class="carousel w-full mx-5 md:mx-0 lg:mx-0">
+                <div id="slide1" class="carousel-item relative w-full">
+                    <img src="Images/1.png" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide4" class="btn btn-circle text-white bg-black">❮</a>
+                        <a href="#slide2" class="btn btn-circle text-white bg-black">❯</a>
+                    </div>
+                </div>
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img src="Images/2.png" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" class="btn btn-circle text-white bg-black">❮</a>
+                        <a href="#slide3" class="btn btn-circle text-white bg-black">❯</a>
+                    </div>
+                </div>
+                <div id="slide3" class="carousel-item relative w-full">
+                    <img src="Images/3.png" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" class="btn btn-circle text-white bg-black">❮</a>
+                        <a href="#slide4" class="btn btn-circle text-white bg-black">❯</a>
+                    </div>
+                </div>
+                <div id="slide4" class="carousel-item relative w-full">
+                    <img src="Images/4.png" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide3" class="btn btn-circle text-white bg-black">❮</a>
+                        <a href="#slide1" class="btn btn-circle text-white bg-black">❯</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:flex md:justify-end mt-5 mx-5 md:mx-0 lg:mx-0 ">
+                <div  class="bg-black text-white max-w-2xl rounded-xl p-8 absolute transform lg:-translate-y-72 lg:mr-24 ">
+                    <h3 class="text-lg lg:text-2xl pb-4 font-extrabold">Meet all the heroes from the field</h3>
+                    <p class="text-sm lg:text-base">Discover the field's unsung heroes in one place – where passion meets prowess. Unveil the stories of
+                        every hero, united by the game.</p>
+                </div>
+            </div>
         </section>
     </header>
     <main>
